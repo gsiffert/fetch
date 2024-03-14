@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+  fetch:
+    build: .
+    volumes:
+      - .:/tmp
+    environment:
+      FETCH_DSN: "file:/tmp/db.sqlite?cache=shared&mode=rwc"
+      FETCH_DOWNLOAD_PATH: "./tmp"
